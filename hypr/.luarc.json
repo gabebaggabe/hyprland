@@ -1,0 +1,10 @@
+{
+ "workspace": {
+   "library": [
+     "home/gabe/.config/hypr"
+   ]
+ },
+ "diagnostics": {
+   "global": ["h;"]
+ }
+}
