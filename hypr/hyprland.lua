@@ -15,8 +15,8 @@ hl.monitor({
 -- Set programs that you use
 local terminal    = "foot"
 local fileManager = "thunar"
+--local crunchyroll = "librewolf -P crunchyroll --new-instance --new-window https://www.crunchyroll.com"
 local menu        = "rofi -show drun"
-
 -------------------
 ---- AUTOSTART ----
 -------------------
@@ -57,7 +57,12 @@ hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")
 ---- LOOK AND FEEL ----
 -----------------------
 -- Refer to https://wiki.hypr.land/Configuring/Basics/Variables/
-local colors = dofile(os.getenv("HOME") .. "/.config/hypr/colors/colors-matugen.lua")
+
+local colors = {
+	primary   = "rgb(bcc2ff)",
+	secondary = "rgb(e6bad6)",
+	muted     = "rgb(90909a)",
+}
 
 hl.config({
 	general = {
@@ -174,6 +179,7 @@ hl.device({
 ---------------------
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
 hl.bind("SUPER + Q", hl.dsp.exec_cmd(terminal))
+--hl.bind("SUPER + C", hl.dsp.exec_cmd(crunchyroll), { description = "Open Crunchyroll" })
 hl.bind("SUPER + F", hl.dsp.window.fullscreen())
 hl.bind("SUPER + W", hl.dsp.window.close())
 hl.bind("SUPER + M",
